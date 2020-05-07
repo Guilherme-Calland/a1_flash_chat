@@ -1,3 +1,6 @@
+import 'package:a1_flash_chat/components/AppButton.dart';
+import 'package:a1_flash_chat/screens/login_screen.dart';
+import 'package:a1_flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
@@ -28,7 +31,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   child: Container(
                     child: Image.asset('images/logo.png'),
                     height: 60,
-                    padding: EdgeInsets.only(right: 16, left: 16),
+                    padding: EdgeInsets.only( left: 16 ),
                   ),
                 ),
                 TypewriterAnimatedTextKit(
@@ -36,13 +39,30 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   isRepeatingAnimation: false,
                   //loading indicator
                   // '${controller.value.toInt()}%',
-                  text: ['Gui Chat'],
+                  text: ['Gui\'s Chat'],
                   textStyle: TextStyle(
                     fontSize: 45.0,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w900,
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 48
+            ),
+            AppButton(
+              title: 'Log in',
+              color: Colors.lightBlue,
+              onPressed: (){
+                Navigator.pushNamed(context, LoginScreen.id);
+              },
+            ),
+            AppButton(
+              title: 'Register',
+              color: Colors.blue,
+              onPressed: (){
+                Navigator.pushNamed(context, RegistrationScreen.id);
+              },
             )
           ],
         )
@@ -50,3 +70,4 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
+
