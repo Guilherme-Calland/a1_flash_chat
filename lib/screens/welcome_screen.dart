@@ -12,7 +12,21 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
+
+
 class _WelcomeScreenState extends State<WelcomeScreen> {
+
+  bool beingDisposed = false;
+
+  @override
+  void initState(){
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +66,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             AppButton(
               title: 'Log in',
-              color: Colors.lightBlue,
+              color: Colors.green,
               onPressed: () => Navigator.push(
                 context,
                 PageRouteBuilder(

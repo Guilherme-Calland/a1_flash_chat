@@ -1,5 +1,5 @@
 import 'package:a1_flash_chat/components/app_button.dart';
-import 'package:a1_flash_chat/constants.dart';
+import 'package:a1_flash_chat/components/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart';
 
@@ -50,9 +50,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 style: TextStyle(
                   color: Colors.black
                 ),
-                decoration: kAppTextFieldDecorationGreen.copyWith(
-                  hintText: 'Enter your email'
-                )
+                decoration: appTextFieldDecoration('Enter your email', Colors.blue)
               ) 
             ),
             SizedBox(
@@ -68,9 +66,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 style: TextStyle(
                   color: Colors.black
                 ),
-                decoration: kAppTextFieldDecorationGreen.copyWith(
-                  hintText: 'Enter your password'
-                )
+                decoration: appTextFieldDecoration('Enter your password', Colors.blue)
               ) 
             ),
           ],
