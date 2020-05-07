@@ -12,8 +12,23 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child:Text('Login Screen')
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        child:Column(
+            mainAxisAlignment : MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Flexible(
+              child: Hero(
+                tag: 'logo',
+                child: Container(
+                  height: 200,
+                  child: Image.asset('images/logo.png')
+                )
+              )
+            )
+          ],
+        )
       )
     );
   }

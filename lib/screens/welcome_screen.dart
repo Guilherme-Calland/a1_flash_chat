@@ -1,4 +1,4 @@
-import 'package:a1_flash_chat/components/AppButton.dart';
+import 'package:a1_flash_chat/components/app_button.dart';
 import 'package:a1_flash_chat/screens/login_screen.dart';
 import 'package:a1_flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -53,16 +53,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             AppButton(
               title: 'Log in',
               color: Colors.lightBlue,
-              onPressed: (){
-                Navigator.pushNamed(context, LoginScreen.id);
-              },
+              onPressed: () => Navigator.push(
+                context,
+                PageRouteBuilder(
+                  transitionDuration: Duration(seconds: 1),
+                  pageBuilder: (_, __, ___) => LoginScreen()
+                )
+              ),
             ),
             AppButton(
               title: 'Register',
               color: Colors.blue,
-              onPressed: (){
-                Navigator.pushNamed(context, RegistrationScreen.id);
-              },
+              onPressed: () => Navigator.push(
+                context,
+                PageRouteBuilder(
+                  transitionDuration: Duration(seconds: 1),
+                  pageBuilder: (_, __, ___) => RegistrationScreen()
+                )
+              ),
             )
           ],
         )
